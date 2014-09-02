@@ -35,12 +35,8 @@ there is no GUI for image display and select now, so just import this program an
     # test.py
     from prakuli import *
 
-    def main():
-        # it will find the image in `images/` folder
-        # or give a absolutely path
-        doubleClick('test.png')
+    # it will find the image in `images/` folder
+    # or give a absolutely path
+    doubleClick('test.png')
 
-    if __name__ == '__main__':
-        main()
-
-now run it by ``python2 test.py``, it will start to find ``test.png`` in the screen and double click it
+now run it by ``python2 test.py``, it will start to find ``test.png`` on the screen and double click it
