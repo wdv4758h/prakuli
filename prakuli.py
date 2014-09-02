@@ -55,3 +55,6 @@ def click(image, button=1, n=1):
 
 def doubleClick(image):
     click(image, 1, 2)
+
+def rightClick(image):
+    click(image, 2, 1)
