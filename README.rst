@@ -21,7 +21,7 @@ Todo
 ========================================
 
 - [x] `Click <http://doc.sikuli.org/region.html?highlight=click#Region.click>`_
-- [ ] `Type <http://doc.sikuli.org/region.html?highlight=click#Region.type>`_
+- [x] `Type <http://doc.sikuli.org/region.html?highlight=click#Region.type>`_
 - [ ] setup script
 - [ ] GUI for image display
 
