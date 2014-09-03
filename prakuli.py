@@ -64,20 +64,18 @@ def rightClick(image):
 def typeword(text, image=None):
     if image:
         image = getimage(image)
-        fs = getpos(image)
 
         done = False
 
         while not done:
+            fs = getpos(image)
 
             if len(fs) > 0:
                 match = fs[0]
                 x = match.x + match.width()/2
                 y = match.y + match.height()/2
-                Mouse.click(x, y, 1)
+                Mouse.click(x, y)
                 Keyboard.type_string(text)
-
-            if fs:
                 done = True
 
     else:
