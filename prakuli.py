@@ -6,6 +6,7 @@ import functools
 from SimpleCV import Image
 from SimpleCV.Camera import ScreenCamera    # need pyscreenshot
 from pymouse import PyMouse
+from pykeyboard import PyKeyboard
 
 def cwd(func):
     @functools.wraps(func)
@@ -19,6 +20,7 @@ Image = cwd(Image)
 
 Screen = ScreenCamera()
 Mouse = PyMouse()
+Keyboard = PyKeyboard()
 
 def getpos(image):
     source = Screen.getImage()
@@ -58,3 +60,25 @@ def doubleClick(image):
 
 def rightClick(image):
     click(image, 2, 1)
+
+def typeword(text, image=None):
+    if image:
+        image = getimage(image)
+        fs = getpos(image)
+
+        done = False
+
+        while not done:
+
+            if len(fs) > 0:
+                match = fs[0]
+                x = match.x + match.width()/2
+                y = match.y + match.height()/2
+                Mouse.click(x, y, 1)
+                Keyboard.type_string(text)
+
+            if fs:
+                done = True
+
+    else:
+        Keyboard.type_string(text)
